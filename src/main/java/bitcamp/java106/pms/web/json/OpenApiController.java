@@ -13,11 +13,11 @@ import bitcamp.java106.pms.service.BoardService;
 
 @RestController
 @RequestMapping("/board")
-public class BoardController {
+public class OpenApiController {
     
     BoardService boardService;
     
-    public BoardController(BoardService boardService) {
+    public OpenApiController(BoardService boardService) {
         this.boardService = boardService;
     }
 
