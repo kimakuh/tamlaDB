@@ -3,14 +3,14 @@ package bitcamp.java106.pms.dao;
 import java.util.List;
 import java.util.Map;
 
-import bitcamp.java106.pms.domain.Board;
+import bitcamp.java106.pms.domain.Tour;
 
 public interface TourDao {
     int delete(int no) ;
     List<Tour> selectList(Map<String,Object> params);
-    int insert(Board board);
-    int update(Board board);
-    Board selectOne(int no);
+    int insert(Tour tour);
+    int update(Tour tour);
+    Tour selectOne(int no);
 }
 
 //ver 52 - 페이지 단위로 데이터 가져오기

@@ -8,50 +8,53 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import bitcamp.java106.pms.domain.Board;
-import bitcamp.java106.pms.service.BoardService;
+import bitcamp.java106.pms.domain.Tour;
+import bitcamp.java106.pms.service.TourService;
 
 @RestController
-@RequestMapping("/board")
-public class BoardController {
+@RequestMapping("/tour")
+public class TourController {
     
-    BoardService boardService;
+    TourService tourService;
     
-    public BoardController(BoardService boardService) {
-        this.boardService = boardService;
+    public TourController(TourService tourService) {
+        this.tourService = tourService;
     }
 
     @RequestMapping("add")
     @ResponseStatus(HttpStatus.CREATED)
-    public void add(Board board) throws Exception {
-        boardService.add(board);
+    public void add(Tour tour) throws Exception {
+        tourService.add(tour);
     }
     
     @RequestMapping("delete")
     //@ResponseStatus(HttpStatus.OK) // 응답 상태 코드 값의 기본은 "200(OK)" 이다.
     public void delete(@RequestParam("no") int no) throws Exception {
-        boardService.delete(no);
+        tourService.delete(no);
     }
     
     @RequestMapping("list{page}")
     public Object list(
             @MatrixVariable(defaultValue="1") int pageNo,
             @MatrixVariable(defaultValue="3") int pageSize) {        
-        return boardService.list(pageNo, pageSize);
+        return tourService.list(pageNo, pageSize);
     }
     
     @RequestMapping("update")
     @ResponseStatus(HttpStatus.OK) // 기본 값이 OK 이다. 
-    public void update(Board board) throws Exception {
-        boardService.update(board);
+    public void update(Tour tour) throws Exception {
+        tourService.update(tour);
     }
     
     @RequestMapping("{no}")
-    public Board view(@PathVariable int no) throws Exception {
-        return boardService.get(no);
+    public Tour view(@PathVariable int no) throws Exception {
+        return tourService.get(no);
     }
 
 }
+
+//ver 55 - JSON 데이터를 출력하는 페이지 컨트롤러 생성
+
 
 
 
