@@ -3,8 +3,8 @@
 <head>
 <meta charset='UTF-8'>
 <title>게시물 목록</title>
-<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/common.css">
 </head>
 <body>
 <div class="container">
@@ -34,8 +34,8 @@
 {{/each}}
 </script>
 
-<script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/handlebars/dist/handlebars.min.js"></script>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../header.js"></script>
 <script>
 
@@ -45,7 +45,7 @@ var trTemplateSrc = $("#tr-template").html();
 // 위에서 준비한 템플릿 데이터를 가지고 HTML을 생성할 템플릿 엔진 준비
 var templateFn = Handlebars.compile(trTemplateSrc);
 
-$.getJSON("../../json/board/list", (data) => {
+$.getJSON("http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?ServiceKey=5fTAWN079L8Yfhs%2F9YQ7zBKyOO6%2BKpeQJ15u5GiLJY4AN%2Bx96uwIQHWmIyyxcQwhOxdfQw8s23QzN%2B22icuKbw%3D%3D&contentTypeId=12&areaCode=39&sigunguCode=&cat1=&cat2=&cat3=&listYN=Y&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&arrange=P&numOfRows=12&pageNo=1&_type=json", (data) => {
     //tableBody.innerHTML = templateFn({list:data});
 	$(tableBody).html(templateFn({list:data}))
 });

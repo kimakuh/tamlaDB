@@ -3,8 +3,8 @@
 <head>
 <meta charset='UTF-8'>
 <title>로그인</title>
-<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/common.css">
 </head>
 <body>
 <div class="container">
@@ -28,7 +28,7 @@
 
 </div><!--.container-->
 
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
 <script>
 $("#loginBtn").click(() => {
 	var data = {
@@ -40,7 +40,7 @@ $("#loginBtn").click(() => {
 	}
 	$.post("../../json/auth/login", data, (result) => {
 		if (result.state == "success")
-			location.href = "../board/list.html";
+			location.href = "../../board/list.html";
 		else 
 			window.alert("로그인 실패!");
 	}, "json");
