@@ -18,11 +18,11 @@
 <tr>
     <th>번호</th><th>제목</th><th>등록일</th>
 </tr>
-<c:forEach items="${list}" var="board">            
+<c:forEach items="${list}" var="tour">            
 <tr>
-    <td>${board.no}</td>
-    <td><a href='${board.no}'>${board.title}</a></td>
-    <td>${board.createdDate}</td>
+    <td>${tour.no}</td>
+    <td><a href='${tour.no}'>${tour.title}</a></td>
+    <td>${tour.createdtime}</td>
 </tr>
 </c:forEach>
 </table>

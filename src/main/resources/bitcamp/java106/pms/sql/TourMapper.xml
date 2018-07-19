@@ -9,13 +9,29 @@
      단순히 알아보기 쉬울 뿐만 아니라 
      스프링 프레임워크와 연동할 때 DAO 객체를 자동 생성할 수 있다. 
 -->
-<mapper namespace="bitcamp.java106.pms.dao.BoardDao">
+<mapper namespace="bitcamp.java106.pms.dao.TourDao">
 
-  <resultMap type="Board" id="BoardMap">
+  <resultMap type="Tour" id="TourMap">
     <id column="bno" property="no"/>
-    <result column="titl" property="title"/>
-    <result column="cont" property="content"/>
-    <result column="cdt" property="createdDate"/>
+    <result column="addr1" property="addr1"/>
+    <result column="areacode" property="areacode"/>
+    <result column="cat1" property="cat1"/>
+    <result column="cat2" property="cat2"/>
+    <result column="cat3" property="cat3"/>
+    <result column="contentid" property="contentid"/>
+    <result column="contenttypeid" property="contenttypeid"/>
+    <result column="createdtime" property="createdtime"/>
+    <result column="firstimage" property="firstimage"/>
+    <result column="firstimage2" property="firstimage2"/>
+    <result column="mapx" property="mapx"/>
+    <result column="mapy" property="mapy"/>
+    <result column="mlevel" property="mlevel"/>
+    <result column="modifiedtime" property="modifiedtime"/>
+    <result column="readcount" property="readcount"/>
+    <result column="sigungucode" property="sigungucode"/>
+    <result column="title" property="title"/>
+    <result column="zipcode" property="zipcode"/>
+
   </resultMap>
   
   <!-- SQL 문 id를 설정할 때 SQL문을 사용하는 메서드 이름과 같게하면
@@ -25,39 +41,39 @@
        그 메서드를 자동생성할 때 사용할 수 있다.
   -->
   <select id="selectList" 
-          resultMap="BoardMap" 
+          resultMap="TourMap" 
           parameterType="map">
-    select bno, titl, cdt 
-    from pms2_board
+    select bno, title, createdtime 
+    from tamlaDB_tourboard
     order by bno desc
     limit #{startRowNo}, #{pageSize}
   </select>
   
-  <insert id="insert" parameterType="Board"
+  <insert id="insert" parameterType="Tour"
           useGeneratedKeys="true" keyColumn="bno" keyProperty="no">
-    insert into pms2_board(titl,cont,cdt) 
+    insert into tamlaDB_tourboard(title,cont,cdt) 
     values(#{title},#{content},now())
   </insert>
   
   <!-- 파라미터의 타입이 primitive type이나 wrapper 클래스, String 클래스인 경우
        값을 꺼낼 때 프로퍼티 이름을 마음대로 해도 된다.
   -->
-  <select id="selectOne" parameterType="int" resultMap="BoardMap">
-    select bno,titl,cont,cdt 
-    from pms2_board 
+  <select id="selectOne" parameterType="int" resultMap="TourMap">
+    select bno,title,cont,createdtime 
+    from tamlaDB_tourboard 
     where bno=#{value}
   </select>
   
-  <update id="update" parameterType="Board">
-    update pms2_board set 
-        titl=#{title}, 
+  <update id="update" parameterType="Tour">
+    update tamlaDB_tourboard set 
+        title=#{title}, 
         cont=#{content}, 
-        cdt=now()
+        createdtime=now()
     where bno=#{no}
   </update>
   
   <delete id="delete" parameterType="int">
-    delete from pms2_board where bno=#{value}
+    delete from tamlaDB_tourboard where bno=#{value}
   </delete>
 </mapper>
 
