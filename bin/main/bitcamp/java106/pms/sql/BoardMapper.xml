@@ -28,14 +28,14 @@
           resultMap="BoardMap" 
           parameterType="map">
     select bno, titl, cdt 
-    from pms2_board
+    from tamlaDB_board
     order by bno desc
     limit #{startRowNo}, #{pageSize}
   </select>
   
   <insert id="insert" parameterType="Board"
           useGeneratedKeys="true" keyColumn="bno" keyProperty="no">
-    insert into pms2_board(titl,cont,cdt) 
+    insert into tamlaDB_board(titl,cont,cdt) 
     values(#{title},#{content},now())
   </insert>
   
@@ -44,12 +44,12 @@
   -->
   <select id="selectOne" parameterType="int" resultMap="BoardMap">
     select bno,titl,cont,cdt 
-    from pms2_board 
+    from tamlaDB_board 
     where bno=#{value}
   </select>
   
   <update id="update" parameterType="Board">
-    update pms2_board set 
+    update tamlaDB_board set 
         titl=#{title}, 
         cont=#{content}, 
         cdt=now()
@@ -57,7 +57,7 @@
   </update>
   
   <delete id="delete" parameterType="int">
-    delete from pms2_board where bno=#{value}
+    delete from tamlaDB_board where bno=#{value}
   </delete>
 </mapper>
 

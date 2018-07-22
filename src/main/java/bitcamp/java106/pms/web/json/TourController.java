@@ -15,7 +15,7 @@ import bitcamp.java106.pms.service.TourService;
 @RequestMapping("/tour")
 public class TourController {
     
-    TourService tourService;
+   TourService tourService;
     
     public TourController(TourService tourService) {
         this.tourService = tourService;
@@ -54,9 +54,6 @@ public class TourController {
 }
 
 //ver 55 - JSON 데이터를 출력하는 페이지 컨트롤러 생성
-
-
-
 
 
 
