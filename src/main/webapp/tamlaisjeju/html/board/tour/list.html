@@ -47,14 +47,16 @@
 
 			<div id="board">
 				<div class="box_wrap">
-					<div class="box"></div><!-- box end end-->
+					<div class="box">
+
+					</div><!-- box end end-->
 				</div><!-- box_wrap end-->
 			</div><!-- board end -->
 
-			<button class="btn btn-primary">getJSON form Open API</button>
+			<!-- <button class="btn btn-primary">getJSON form Open API</button>
 			<button id="clear" class="btn btn-info">clear</button>
 			<input type="text" id="find">
-			<button id="findbtn" class="btn btn-info">find</button>
+			<button id="findbtn" class="btn btn-info">find</button> -->
 
 			<div class="table-responsive">
 				<table class="table table-hover">
@@ -71,6 +73,26 @@
 					<tbody id="result"></tbody>
 				</table>
 			</div>
+
+
+
+
+
+			<div class="pagination_wrap">
+				<div class="pagination">
+					<a href="#">&laquo;</a>
+					<a href="#">1</a>
+					<a href="#" class="active">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">&raquo;</a>
+				</div>
+				<!-- pagination end -->
+			</div>
+			<!-- pagination_wrap end-->
+
 		</div>
 		<!-- content end -->
 	</div>
@@ -78,7 +100,7 @@
 
 
 	<script id="codeTemp" type="text/xxx-mytemplate">
-		{{#each}}
+		{{#each .}}
 		<tr>
 			<td>{{firstimage}}</td>
 			<td>{{title}}</td>
