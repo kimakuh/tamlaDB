@@ -44,6 +44,13 @@
 			<p class="h3_txt">내가 가본 제주는 어디까지일까? 수많은 제주의 아름다운 여행지를 취향에 맞게 선택해보자. 368개의 크고 작은 오름을 비롯하여 눈 돌리면 어디에서나 마주치는 한라산 그리고 푸른 바다…. 제주의 보석 같은 여행지가
 				여러분의 선택을 기다린다.</p>
 
+
+			<div id="board">
+				<div class="box_wrap">
+					<div class="box"></div><!-- box end end-->
+				</div><!-- box_wrap end-->
+			</div><!-- board end -->
+
 			<button class="btn btn-primary">getJSON form Open API</button>
 			<button id="clear" class="btn btn-info">clear</button>
 			<input type="text" id="find">
@@ -71,12 +78,12 @@
 
 
 	<script id="codeTemp" type="text/xxx-mytemplate">
-		{{#each .}}
+		{{#each}}
 		<tr>
 			<td>{{firstimage}}</td>
 			<td>{{title}}</td>
 			<td>{{addr1}}{{addr2}}</td>
-			<td>{{tel}}</td>
+			<td>{{overview}}</td>
 			<td>{{contentid}}</td>
 			<td>{{eventstartdate}}</td>
 		</tr>
