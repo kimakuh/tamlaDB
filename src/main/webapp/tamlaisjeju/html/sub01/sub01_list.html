@@ -18,14 +18,13 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
+
     <!-- css -->
     <link rel="stylesheet" href="../../css/common.css" />
     <link rel="stylesheet" href="../../css/layout.css" />
     <link rel="stylesheet" href="../../css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- js -->
-    <script src="../../js/common/jquery-3.3.1.min.js"></script>
-    <script src="../../js/common/jquery-ui.min.js"></script>
+
 
 </head>
 
@@ -73,15 +72,7 @@
                 <!-- toggle_area end -->
             </div>
             <!-- form_wrap end -->
-            <script>
-                $('.toggle_area button').on('click', function (e) {
-                    if ($(this).hasClass('thumb')) {
-                        $('.board_list').removeClass('type02').addClass('type01');
-                    } else if ($(this).hasClass('list')) {
-                        $('.board_list').removeClass('type01').addClass('type02');
-                    }
-                });
-            </script>
+
 
             <div id="board" class="board_list type01">
                 <div id="board_cont" class="box_wrap clear">
@@ -413,27 +404,6 @@
     <!-- container end-->
 
 
-    <script>
-        var $boxs = $("#board_cont > .box");
-        var $btns = $(".btn").on("click", function () {
-
-            var active =
-                $btns.removeClass("active")
-                .filter(this)
-                .addClass("active")
-                .data("filter");
-
-            $boxs
-                .hide()
-                .filter("." + active)
-                .fadeIn(450);
-
-        });
-    </script>
-
-
-
-
 
 
 
@@ -445,15 +415,32 @@
 
 
     <footer id="footer"></footer>
+    <!-- js -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/jquery-ui/external/jquery/jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#header").load("../include/sub_header.html")
-            $("#footer").load("../include/sub_footer.html")
+            $("#header").load("../../include/header.html")
+            $("#footer").load("../../include/footer.html")
             /* id 지정을 통해서도 가능합니다. 
              $("#header").load("header.html #navbar")
              */
         });
     </script>
+                <script>
+                    $('.toggle_area button').on('click', function (e) {
+                        if ($(this).hasClass('thumb')) {
+                            $('.board_list').removeClass('type02').addClass('type01');
+                        } else if ($(this).hasClass('list')) {
+                            $('.board_list').removeClass('type01').addClass('type02');
+                        }
+                    });
+                </script>
+
+
+
+
+
 </body>
 
 </html>

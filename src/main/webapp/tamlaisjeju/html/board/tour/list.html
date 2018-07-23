@@ -1,53 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
 <head>
-<meta charset='UTF-8'>
-<title>공지사항 게시물 목록</title>
-<link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../../css/common.css">
-<link rel="stylesheet" href="../../../css/layout.css">
+	<!-- meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>탐라는제주 - 숨어 있던 진짜 hot한 제주</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+	<meta property="og:title" content="탐라는제주">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="탐라는제주 - 숨어 있던 진짜 hot한 제주">
+	<!-- font -->
+	<link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+	    crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- css -->
+	<link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../css/common.css" />
+	<link rel="stylesheet" href="../../../css/layout.css" />
+
 </head>
+
 <body>
-<div class="container">
 
-<nav id="header" class="navbar navbar-expand-lg navbar-light bg-light"></nav>
 
-<h1>게시물 목록</h1>
-<p><a href='form.html' class="btn btn-primary btn-sm">새 글</a></p>
-<table class="table table-hover">
-<thead>
-    <tr><th>번호</th><th>제목</th><th>등록일</th></tr>
-</thead>
-<tbody id="tableBody"></tbody>
-</table>
 
-</div><!--.container-->
+	<header id="header"></header>
 
-<script id="tr-template" type="text/x-handlebars-template">
-{{#each list}}
-<tr>
-	<td>{{no}}</td>
-	<td><a href='form.html?no={{no}}'>{{title}}</a></td>
-	<td>{{createdDate}}</td>
-</tr>
-{{/each}}
-</script>
 
-<script src="../../../node_modules/handlebars/dist/handlebars.min.js"></script>
 
-<script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../../node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../../js/common.js"></script>
-<script src="../../header.js"></script>
-<script src="list.js"></script>
+	<div id="container" class="container">
+		<div id="visual">
+			<img src="../../../img/sub01/sub01_visual.jpg" alt="제주의 산">
+		</div>
+		<!-- visual end -->
+		<div id="content" class="content wrapper">
+			<h3>제주도 모든 여행지를 한 눈에…</h3>
+
+			<p class="h3_txt">내가 가본 제주는 어디까지일까? 수많은 제주의 아름다운 여행지를 취향에 맞게 선택해보자. 368개의 크고 작은 오름을 비롯하여 눈 돌리면 어디에서나 마주치는 한라산 그리고 푸른 바다…. 제주의 보석 같은 여행지가
+				여러분의 선택을 기다린다.</p>
+
+			<button class="btn btn-primary">getJSON form Open API</button>
+			<button id="clear" class="btn btn-info">clear</button>
+			<input type="text" id="find">
+			<button id="findbtn" class="btn btn-info">find</button>
+
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>이미지</th>
+							<th>타이틀</th>
+							<th>주소</th>
+							<th>전화번호</th>
+							<th>ID</th>
+							<th>기간</th>
+						</tr>
+					</thead>
+					<tbody id="result"></tbody>
+				</table>
+			</div>
+		</div>
+		<!-- content end -->
+	</div>
+	<!-- container end-->
+
+
+	<script id="codeTemp" type="text/xxx-mytemplate">
+		{{#each .}}
+		<tr>
+			<td>{{firstimage}}</td>
+			<td>{{title}}</td>
+			<td>{{addr1}}{{addr2}}</td>
+			<td>{{tel}}</td>
+			<td>{{contentid}}</td>
+			<td>{{eventstartdate}}</td>
+		</tr>
+		{{/each}}
+	</script>
+
+
+
+	<footer id="footer"></footer>
+
+
+
+
+
+
+
+
+
+	<!-- js -->
+	<script src="../../../node_modules/handlebars/dist/handlebars.min.js"></script>
+	<script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../../../js/common.js"></script>
+	<!-- <script src="../../../js/header.js"></script> -->
+	<script src="list.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#header").load("../../../include/header.html")
+			$("#footer").load("../../../include/footer.html")
+			/* id 지정을 통해서도 가능합니다. 
+			 $("#header").load("header.html #navbar")
+			 */
+		});
+	</script>
+
+
 
 </body>
+
 </html>
-
-
-
-
-
-
-
