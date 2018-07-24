@@ -34,16 +34,18 @@
 
 
 	<div id="container" class="container">
-		<div id="result" class="view_cont">
+		<div id="content" class="content wrapper">
+			<div id="result" class="view_cont">
 
 
+			</div>
+			<!-- result end-->
+			<!-- content end -->
 		</div>
-		<!-- result end-->
-	</div>
-	<!-- container end -->
+		<!-- container end -->
 
-	<script id="codeTemp" type="text/x-handlebars-template">
-		<div id="visual" class="svisual">
+		<script id="codeTemp" type="text/x-handlebars-template">
+			<div id="visual" class="svisual">
 				<img src="{{firstimage}}" alt="{{title}}">
 			</div>
 			<!-- visual end-->
@@ -80,37 +82,34 @@
 				<!-- visual_cont_box-->
 			</div>
 			<!-- visual_cont end-->
-	</script>
+		</script>
 
 
 
-	<footer id="footer"></footer>
+		<footer id="footer"></footer>
 
 
 
 
 
 
-	<!-- js -->
-	<script src="../../../node_modules/handlebars/dist/handlebars.min.js"></script>
-	<script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="../../../node_modules/popper.js/dist/umd/popper.min.js"></script>
-	<script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="../../../js/common.js"></script>
-	<!-- <script src="../../../js/header.js"></script> -->
-	<script src="view.js"></script>
-
-
-
-	<script>
-		$(document).ready(function () {
-			$("#header").load("../../../include/header.html")
-			$("#footer").load("../../../include/footer.html")
-			/* id 지정을 통해서도 가능합니다. 
-			 $("#header").load("header.html #navbar")
-			 */
-		});
-	</script>
+		<!-- js -->
+		<script src="../../../node_modules/handlebars/dist/handlebars.min.js"></script>
+		<script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="../../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+		<script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../../js/common.js"></script>
+		<!-- <script src="../../../js/header.js"></script> -->
+		<script src="view.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("#header").load("../../../include/header.html")
+				$("#footer").load("../../../include/footer.html")
+				/* id 지정을 통해서도 가능합니다. 
+				 $("#header").load("header.html #navbar")
+				 */
+			});
+		</script>
 
 
 

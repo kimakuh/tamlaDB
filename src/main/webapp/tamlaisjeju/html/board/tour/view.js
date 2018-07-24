@@ -18,7 +18,7 @@ $(function () {
             // console.log(contentId.response);
             // console.log(contentId.response.body);
             // console.log(contentId.response.body.items);
-            console.log(contentId.response.body.items.item);
+            // console.log(contentId.response.body.items.item);
 
             var items = contentId.response.body.items.item;
         
@@ -26,8 +26,8 @@ $(function () {
             var template = Handlebars.compile(temp2);
             
             var html = template(items);
-            console.log(items);
-            console.log(html);
+            // console.log(items);
+            // console.log(html);
             
             $('#result').html(html);
 
