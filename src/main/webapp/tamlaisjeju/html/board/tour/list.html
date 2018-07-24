@@ -48,16 +48,16 @@
 
 			<ul class="category_tab">
 				<li>
-					<a href="?cat=all" class="active">#전체</a>
+					<a href="#" class="active">#전체</a>
 				</li>
 				<li>
-					<a href="?cat=tour" class="">#관광</a>
+					<a href="#" class="">#관광</a>
 				</li>
 				<li>
-					<a href="?cat=food" class="">#음식</a>
+					<a href="#" class="">#음식</a>
 				</li>
 				<li>
-					<a href="?cat=culture" class="">#문화</a>
+					<a href="#" class="">#문화</a>
 				</li>
 
 			</ul>
@@ -67,7 +67,7 @@
 
 
 
-			<div id="board">
+			<div id="board" class="board_list type01">
 
 				<div class="form_wrap">
 
@@ -84,9 +84,18 @@
 
 				<div class="box_wrap clear" id="result">
 
-
 				</div>
-				<!-- box_wrap end-->
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 			<!-- board end -->
 
@@ -122,16 +131,64 @@
 
 
 	<script id="codeTemp" type="text/xxx-mytemplate">
+
+
+
 		{{#each .}}
+
 		<div class="box">
-			<a href="#">
-				<img src="{{firstimage}}" alt="{{title}}">
-				<strong>{{title}}</strong>
-				<span>{{addr1}}{{addr2}}</span>
-			</a>
+			<div class="img_area">
+				<a href="#">
+					<span class="category">관광지</span>
+					<img src="{{firstimage}}" alt="{{title}}">
+					<span class="star_score"></span>
+				</a>
+			</div>
+			<!-- img area end -->
+
+			<div class="box_cont_area">
+				<a href="#">
+					<b>{{title}}</b>
+				</a>
+				<p class="location_category">{{addr1}}</p>
+				<p class="hashtag">
+					<a href="#">#전복김밥</a>
+					<a href="#">#통전복주먹밥</a>
+					<a href="#">#미역국</a>
+				</p>
+				<p class="my_hashtag">
+					<a href="#"></a>
+				</p>
+				<div class="icon_area">
+					<ul class="clear">
+						<li class="icon like_icon">
+							<a href="#">
+								<span>좋아요</span>
+								<span class="like_count">60</span>
+							</a>
+						</li>
+						<li class="icon zzim_icon">
+							<a href="#">
+								<span>찜하기</span>
+								<span class="zzim_count">883</span>
+							</a>
+						</li>
+						<li class="icon review_icon">
+							<a href="#">
+								<span>리뷰</span>
+								<span class="review_count">921</span>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- box_cont_area -->
 		</div>
 		<!-- box end end-->
 		{{/each}}
+
+
 
 
 
@@ -141,7 +198,28 @@
 	<style type="text/css">
 		.box {
 			float: left;
-			width: 33.3%;
+			width: 30%;
+			margin-left: 2%;
+			position: relative;
+		}
+
+		.box img {
+			display: block;
+		}
+
+		.box figcaption {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.box a:hover figcaption {
+			display: block;
+			background: url('../../../img/common/figcaption_bg.png') repeat;
+			color: #fff;
+			opacity: 0.3;
+
 		}
 
 
@@ -152,22 +230,22 @@
 		}
 
 		.category_tab li {
-			width:15%;
+			width: 15%;
 			margin: 0 5px;
 			display: inline-block;
 			overflow: hidden;
 		}
 
 		.category_tab li a {
-			
+
 			display: block;
-			padding:15px;
+			padding: 15px;
 			background-color: #fff;
 			border: 1px solid #ccc;
-			border-radius:30px;
+			border-radius: 30px;
 			font-size: 17px;
 			line-height: 24px;
-	
+
 		}
 
 		.category_tab li a:hover,
@@ -198,7 +276,7 @@
 	<!-- <script src="../../../js/header.js"></script> -->
 	<script src="list.js"></script>
 
-	<script type="text/javascript">
+	<script>
 		$(document).ready(function () {
 			$("#header").load("../../../include/header.html")
 			$("#footer").load("../../../include/footer.html")
