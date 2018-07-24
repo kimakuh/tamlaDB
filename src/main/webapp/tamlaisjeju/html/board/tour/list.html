@@ -45,34 +45,56 @@
 				여러분의 선택을 기다린다.</p>
 
 
-			<div id="board">
-				<div class="box_wrap">
-					<div class="box">
 
-					</div><!-- box end end-->
-				</div><!-- box_wrap end-->
-			</div><!-- board end -->
+			<ul class="category_tab">
+				<li>
+					<a href="?cat=all" class="active">#전체</a>
+				</li>
+				<li>
+					<a href="?cat=tour" class="">#관광</a>
+				</li>
+				<li>
+					<a href="?cat=food" class="">#음식</a>
+				</li>
+				<li>
+					<a href="?cat=culture" class="">#문화</a>
+				</li>
+
+			</ul>
+
+
+
+
+
+
+			<div id="board">
+
+				<div class="form_wrap">
+
+					<select class="recordsPerPage">
+						<option disabled selected value> -- select an option -- </option>
+						<option value="6">6</option>
+						<option value="9">9</option>
+						<option value="12">6</option>
+					</select>
+
+				</div>
+				<!-- form_wrap end -->
+
+
+				<div class="box_wrap clear" id="result">
+
+
+				</div>
+				<!-- box_wrap end-->
+			</div>
+			<!-- board end -->
 
 			<!-- <button class="btn btn-primary">getJSON form Open API</button>
 			<button id="clear" class="btn btn-info">clear</button>
 			<input type="text" id="find">
 			<button id="findbtn" class="btn btn-info">find</button> -->
 
-			<div class="table-responsive">
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>이미지</th>
-							<th>타이틀</th>
-							<th>주소</th>
-							<th>전화번호</th>
-							<th>ID</th>
-							<th>기간</th>
-						</tr>
-					</thead>
-					<tbody id="result"></tbody>
-				</table>
-			</div>
 
 
 
@@ -101,16 +123,59 @@
 
 	<script id="codeTemp" type="text/xxx-mytemplate">
 		{{#each .}}
-		<tr>
-			<td>{{firstimage}}</td>
-			<td>{{title}}</td>
-			<td>{{addr1}}{{addr2}}</td>
-			<td>{{overview}}</td>
-			<td>{{contentid}}</td>
-			<td>{{eventstartdate}}</td>
-		</tr>
+		<div class="box">
+			<a href="#">
+				<img src="{{firstimage}}" alt="{{title}}">
+				<strong>{{title}}</strong>
+				<span>{{addr1}}{{addr2}}</span>
+			</a>
+		</div>
+		<!-- box end end-->
 		{{/each}}
+
+
+
+
 	</script>
+
+	<style type="text/css">
+		.box {
+			float: left;
+			width: 33.3%;
+		}
+
+
+
+		.category_tab {
+			width: 100%;
+			text-align: center;
+		}
+
+		.category_tab li {
+			width:15%;
+			margin: 0 5px;
+			display: inline-block;
+			overflow: hidden;
+		}
+
+		.category_tab li a {
+			
+			display: block;
+			padding:15px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius:30px;
+			font-size: 17px;
+			line-height: 24px;
+	
+		}
+
+		.category_tab li a:hover,
+		.category_tab li .active {
+			background-color: #3a3b3c;
+			color: #fff;
+		}
+	</style>
 
 
 
