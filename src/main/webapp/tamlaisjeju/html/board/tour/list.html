@@ -67,17 +67,12 @@
 
 
 
+
+
+
 			<div id="board" class="board_list type01">
 
 				<div class="form_wrap">
-
-					<select class="recordsPerPage">
-						<option disabled selected value> -- select an option -- </option>
-						<option value="6">6</option>
-						<option value="9">9</option>
-						<option value="12">6</option>
-					</select>
-
 				</div>
 				<!-- form_wrap end -->
 
@@ -87,14 +82,20 @@
 				</div>
 
 
-
-
-
-
-
-
-
-
+				<div class="pagination_wrap">
+					<div class="pagination">
+						<a href="#">&laquo;</a>
+						<a href="#">1</a>
+						<a href="#" class="active">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">&raquo;</a>
+					</div>
+					<!-- pagination end -->
+				</div>
+				<!-- pagination_wrap end-->
 
 			</div>
 			<!-- board end -->
@@ -109,20 +110,7 @@
 
 
 
-			<div class="pagination_wrap">
-				<div class="pagination">
-					<a href="#">&laquo;</a>
-					<a href="#">1</a>
-					<a href="#" class="active">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<a href="#">5</a>
-					<a href="#">6</a>
-					<a href="#">&raquo;</a>
-				</div>
-				<!-- pagination end -->
-			</div>
-			<!-- pagination_wrap end-->
+
 
 		</div>
 		<!-- content end -->
@@ -131,7 +119,6 @@
 
 
 	<script id="codeTemp" type="text/xxx-mytemplate">
-
 
 
 		{{#each .}}
@@ -196,34 +183,6 @@
 	</script>
 
 	<style type="text/css">
-		.box {
-			float: left;
-			width: 30%;
-			margin-left: 2%;
-			position: relative;
-		}
-
-		.box img {
-			display: block;
-		}
-
-		.box figcaption {
-			display: none;
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
-
-		.box a:hover figcaption {
-			display: block;
-			background: url('../../../img/common/figcaption_bg.png') repeat;
-			color: #fff;
-			opacity: 0.3;
-
-		}
-
-
-
 		.category_tab {
 			width: 100%;
 			text-align: center;
@@ -258,7 +217,6 @@
 
 
 	<footer id="footer"></footer>
-
 
 
 
