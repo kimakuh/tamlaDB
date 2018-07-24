@@ -2032,7 +2032,44 @@ board_list - 게시판 리스트
   border: 1px solid #e5e5e5;
 }
 
-.category_wrap {
+
+
+/* category_tab */
+
+.category_tab {
+  width: 100%;
+  text-align: center;
+  margin:5% 0;
+}
+
+.category_tab li {
+  width: 15%;
+  margin: 0 5px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.category_tab li a {
+
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 17px;
+  line-height: 24px;
+
+}
+
+.category_tab li a:hover,
+.category_tab li .active {
+  background-color: #3a3b3c;
+  color: #fff;
+}
+
+
+
+/* .category_wrap {
   border-top: 1px solid #cbcbcb;
   border-left: 1px solid #cbcbcb;
   ;
@@ -2051,7 +2088,7 @@ board_list - 게시판 리스트
   background: #24a7e9;
   color: #fff;
   box-shadow: none;
-}
+} */
 
 /* board_list type01*/
 

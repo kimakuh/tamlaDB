@@ -37,6 +37,15 @@ $(function() {
     });
 });
 
-$('#clear').on('click', function() {
-    $('#result').html("");
-});
+
+
+
+
+// $('#clear').on('click', function() {
+//     $('#result').html("");
+// });
+
+
+
+
+

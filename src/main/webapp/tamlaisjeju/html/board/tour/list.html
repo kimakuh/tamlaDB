@@ -80,8 +80,6 @@
 				<div class="box_wrap clear" id="result">
 
 				</div>
-
-
 				<div class="pagination_wrap">
 					<div class="pagination">
 						<a href="#">&laquo;</a>
@@ -96,7 +94,6 @@
 					<!-- pagination end -->
 				</div>
 				<!-- pagination_wrap end-->
-
 			</div>
 			<!-- board end -->
 
@@ -104,14 +101,6 @@
 			<button id="clear" class="btn btn-info">clear</button>
 			<input type="text" id="find">
 			<button id="findbtn" class="btn btn-info">find</button> -->
-
-
-
-
-
-
-
-
 		</div>
 		<!-- content end -->
 	</div>
@@ -119,13 +108,10 @@
 
 
 	<script id="codeTemp" type="text/xxx-mytemplate">
-
-
 		{{#each .}}
-
 		<div class="box">
 			<div class="img_area">
-				<a href="#">
+				<a href="view.html?contentid={{contentid}}">
 					<span class="category">관광지</span>
 					<img src="{{firstimage}}" alt="{{title}}">
 					<span class="star_score"></span>
@@ -134,7 +120,7 @@
 			<!-- img area end -->
 
 			<div class="box_cont_area">
-				<a href="#">
+				<a href="view.html?{{contentid}}">
 					<b>{{title}}</b>
 				</a>
 				<p class="location_category">{{addr1}}</p>
@@ -174,45 +160,7 @@
 		</div>
 		<!-- box end end-->
 		{{/each}}
-
-
-
-
-
-
 	</script>
-
-	<style type="text/css">
-		.category_tab {
-			width: 100%;
-			text-align: center;
-		}
-
-		.category_tab li {
-			width: 15%;
-			margin: 0 5px;
-			display: inline-block;
-			overflow: hidden;
-		}
-
-		.category_tab li a {
-
-			display: block;
-			padding: 15px;
-			background-color: #fff;
-			border: 1px solid #ccc;
-			border-radius: 30px;
-			font-size: 17px;
-			line-height: 24px;
-
-		}
-
-		.category_tab li a:hover,
-		.category_tab li .active {
-			background-color: #3a3b3c;
-			color: #fff;
-		}
-	</style>
 
 
 
