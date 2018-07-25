@@ -37,27 +37,94 @@
             <div id="mvisual">
                 <ul>
                     <li class="img01">
-                        <h3><span class="tit_bg">숨어 있던 진짜 hot한 제주</span></h3>
+                        <div class="tit_bg">
+                            <h3>숨어 있던 진짜 hot한 제주</h3>
+                            <p>탐라는제주를 통해 여행일정을 계획하고 공유하며, 여행친구을 찾아 떠나보세요!</p>
+                        </div>
                     </li>
                     <li class="img02">
-                        <h3><span class="tit_bg">숨어 있던 진짜 hot한 제주</span></h3>
+                        <div class="tit_bg">
+                            <h3>숨어 있던 진짜 hot한 제주</h3>
+                            <p>탐라는제주를 통해 여행일정을 계획하고 공유하며, 여행친구을 찾아 떠나보세요!</p>
+                        </div>
                     </li>
                     <li class="img03">
-                        <h3><span class="tit_bg">숨어 있던 진짜 hot한 제주</span></h3>
+                        <div class="tit_bg">
+                            <h3>숨어 있던 진짜 hot한 제주</h3>
+                            <p>탐라는제주를 통해 여행일정을 계획하고 공유하며, 여행친구을 찾아 떠나보세요!</p>
+                        </div>
                     </li>
                     <li class="img04">
-                        <h3><span class="tit_bg">숨어 있던 진짜 hot한 제주</span></h3>
+                        <div class="tit_bg">
+                            <h3>숨어 있던 진짜 hot한 제주</h3>
+                            <p>탐라는제주를 통해 여행일정을 계획하고 공유하며, 여행친구을 찾아 떠나보세요!</p>
+                        </div>
                     </li>
                     <li class="img05">
-                        <h3><span class="tit_bg">숨어 있던 진짜 hot한 제주</span></h3>
+                        <div class="tit_bg">
+                            <h3>숨어 있던 진짜 hot한 제주</h3>
+                            <p>탐라는제주를 통해 여행일정을 계획하고 공유하며, 여행친구을 찾아 떠나보세요!</p>
+                        </div>
                     </li>
                     <li class="img06">
-                        <h3><span class="tit_bg">숨어 있던 진짜 hot한 제주</span></h3>
+                        <div class="tit_bg">
+                            <h3>숨어 있던 진짜 hot한 제주</h3>
+                            <p>탐라는제주를 통해 여행일정을 계획하고 공유하며, 여행친구을 찾아 떠나보세요!</p>
+                        </div>
                     </li>
                 </ul>
             </div>
             <div id="mcontent" class="wrapper">
-                <!-- content 안의 가장 큰 제목은 h3 태그로 작성합니다. -->
+                <div class="mcont_area">
+                    <h3>가장 인기있는 여행지</h3>
+                    <p>지금 가장 많은 분들이 찾는 여행지를 추천해요.</p>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/best_spot_img01.gif" alt="성산일출봉">
+                                <b>성산일출봉</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/main/best_spot_img02.jpg" alt="사려니숲길">
+                                <b>사려니숲길</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">한라산국립공원</a>
+                        </li>
+                        <li>
+                            <a href="#">협재해수욕장</a>
+                        </li>
+                        <li>
+                            <a href="#">카멜리아힐</a>
+                        </li>
+                        <li>
+                            <a href="#">우도(해양도립공원)</a>
+                        </li>
+                        <li>
+                            <a href="#">섭지코지</a>
+                        </li>
+                        <li>
+                            <a href="#">쇠소깍</a>
+                        </li>
+                        <li>
+                            <a href="#">제주김녕미로공원</a>
+                        </li>
+                        <li>
+                            <a href="#">비자림</a>
+                        </li>
+
+
+                    </ul>
+                    <div class="btn_wrap">
+                        <a class="btn btn-ani btn-file" href="#" title="새창열림" target="_blank">바로가기
+                            <span class="bico bticon right home"></span>
+                        </a>
+                    </div>
+                </div>
                 <h3>UI_COMPONENT</h3>
                 <p class="h3_txt">content 안의 가장 큰 제목은 h3 태그로 작성합니다.content 안의 가장 큰 제목은 h3 태그로 작성합니다.content 안의 가장 큰 제목은 h3 태그로 작성합니다.content
                     안의 가장 큰 제목은 h3 태그로 작성합니다.</p>
@@ -80,7 +147,8 @@
                 position: relative;
                 width: 100%;
                 height: 420px;
-            
+                text-align: center;
+
             }
 
             #mvisual ul li.img01 {
@@ -113,11 +181,22 @@
                 background-size: cover;
             }
 
+            #mvisual ul li div.tit_bg {
+                display: inline-block;
+                background: url('img/main/mtit_bg.png') repeat;
+            }
+
             #mvisual ul li h3 {
+                position: relative;
                 margin: 0;
                 padding: 0;
                 color: #fff;
-                vertical-align: middle;
+                font-size: 30px;
+            }
+
+            #mvisual ul li p {
+                color: #fff;
+                font-size: 20px;
             }
         </style>
 
