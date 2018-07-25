@@ -97,14 +97,12 @@
                                 <img src="img/main/best_spot_img03.jpg" alt="한라산국립공원">
                                 <b>한라산국립공원</b>
                             </a>
-
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/main/best_spot_img04.jpg" alt="협재해수욕장">
                                 <b>협재해수욕장</b>
                             </a>
-
                         </li>
                         <li>
                             <a href="#">
@@ -130,22 +128,24 @@
                                 <b>비자림</b>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">
-                                <img src="img/main/best_spot_img09.jpg" alt="제주김녕미로공원">
+                                <img src="img/main/best_spot_img09.gif" alt="제주김녕미로공원">
                                 <b>제주김녕미로공원</b>
                             </a>
-                        </li>
-
-
-
+                        </li> -->
                     </ul>
-                    <div class="btn_wrap">
-                        <a class="btn btn-ani btn-file" href="#" title="새창열림" target="_blank">바로가기
-                            <span class="bico bticon right home"></span>
-                        </a>
-                    </div>
                 </div>
+                <!-- mcont_area end-->
+                <div class="btn_wrap">
+                    <a class="btn btn-ani btn-file" href="#" title="새창열림" target="_blank">더 많은 여행지
+                        <span class="bico bticon right home"></span>
+                    </a>
+                </div>
+                <!-- btn_wrap end-->
+
+
+
                 <h3>UI_COMPONENT</h3>
                 <p class="h3_txt">content 안의 가장 큰 제목은 h3 태그로 작성합니다.content 안의 가장 큰 제목은 h3 태그로 작성합니다.content 안의 가장 큰 제목은 h3 태그로 작성합니다.content
                     안의 가장 큰 제목은 h3 태그로 작성합니다.</p>
@@ -231,8 +231,31 @@
             #mcontent .mcont_area ul {}
 
             #mcontent .mcont_area ul li {
+                position: relative;
                 float: left;
-                width: 20%;
+                width: 25%;
+            }
+
+            #mcontent .mcont_area ul li a {
+                display: block;
+                height: 232px;
+
+            }
+
+            #mcontent .mcont_area ul li a img {
+                display: block;
+                min-height: 232px;
+                max-height: 240px;
+            }
+
+            #mcontent .mcont_area ul li a b {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                font-size: 18px;
+                color: #fff;
+                text-align: center;
             }
         </style>
 
